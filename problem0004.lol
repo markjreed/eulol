@@ -1,5 +1,11 @@
 BTW Project Euler problem 4 
 BTW Find the largest palindromic 6-digit number
+
+BTW This exploits the fact that a palindrome of the form ABCCBA
+BTW is equal to A * 100000 + B * 10000 + C * 1000 + C * 100 + B * 10 + A
+BTW which is    A * 100001 + B * 10010 + C * 1100
+BTW which is 11(A *   9091 + B *   910 + C *  100)
+
 HAI 1.2
 I HAS A a ITZ 9
 I HAS A dun ITZ FAIL
