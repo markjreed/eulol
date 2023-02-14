@@ -2,43 +2,43 @@ BTW Project Euler problem 7
 BTW Find the 10,001st prime number
 HAI 1.3
 
+BTW Sieve of Eratosthenes
 I HAS A Max ITZ 105000
 I HAS A Goal ITZ 10001
 I HAS A Sieve ITZ A BUKKIT
-IM IN YR Loop UPPIN YR i WILE DIFFRINT i AN Max
+
+BTW initialize sieve to all true
+IM IN YR Init UPPIN YR i WILE DIFFRINT i AN Max
   Sieve HAS A SRS i ITZ WIN
-IM OUTTA YR Loop
+IM OUTTA YR Init
 Sieve'Z SRS 0 R FAIL
 Sieve'Z SRS 1 R FAIL
-I HAS A LatestPrime 
+
 I HAS A PrimeCount ITZ 0
-I HAS A i ITZ 2
-IM IN YR Outer UPPIN YR x WILE DIFFRINT i AN Max
-  IM IN YR First UPPIN YR x WILE BOTH OF NOT Sieve'Z SRS i AN DIFFRINT i AN Max
-    i R SUM OF i AN 1
-  IM OUTTA YR First
-  BOTH SAEM i AN Max 
-  O RLY?
+I HAS A p ITZ 2
+
+IM IN YR Main
+  PrimeCount R SUM OF PrimeCount AN 1
+  BOTH SAEM PrimeCount AN Goal, O RLY?
     YA RLY
-     GTFO
-  OIC
-  LatestPrime R i
-  PrimeCount R SUM OF 1 AN PrimeCount 
-  BOTH SAEM PrimeCount AN Goal 
-  O RLY?
-    YA RLY
+      VISIBLE p
       GTFO
   OIC
-  I HAS A j ITZ PRODUKT  OF i AN i
-  IM IN YR Second UPPIN YR x WILE BOTH SAEM j AN SMALLR OF j AN Max
-    BOTH SAEM j AN Max
-    O RLY?
-      YA RLY
-        GTFO
-    OIC
-    Sieve'Z SRS j R FAIL
-    j R SUM OF j AN i
-  IM OUTTA YR Second
-IM OUTTA YR Outer
-VISIBLE LatestPrime
+
+  I HAS A m ITZ p
+  IM IN YR CrossOut
+     m R SUM OF m AN p
+     BOTH SAEM m AN BIGGR OF m AN Max, O RLY?
+       YA RLY
+         GTFO
+       NO WAI
+         Sieve'Z SRS m R FAIL
+     OIC
+  IM OUTTA YR CrossOut
+
+  p R SUM OF p AN 1
+  IM IN YR NextPrime UPPIN YR Dummy WILE BOTH OF NOT Sieve'Z SRS p AN BOTH SAEM p AN SMALLR OF p AN Max
+    p R SUM OF p AN 1
+  IM OUTTA YR NextPrime
+IM OUTTA YR Main
 KTHXBYE
